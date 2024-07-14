@@ -1,3 +1,665 @@
+
+@font-face {
+  font-family: comicPillow;
+  src: url('./assests/font/ComicPillow.otf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: MangGondro;
+  src: url('./assests/font/MangGondrong.otf');
+  font-weight: 500;
+}
+
+@font-face {
+font-family: Oidish;
+  src: url('./assests/font/Oldish.ttf');
+  font-weight: 400;
+}
+
+/* Default css */
+
+/* Default css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: 'comicPillow', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: 0.35s ease-in-out;
+}
+
+nav.navbar.scrolled {
+  padding: 0;
+  background-color: #121212;
+}
+
+nav.navbar a.navbar-brand {
+  width: 9%;
+}
+
+nav.navbar .navbar-nav {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin-left: 20px; /* Add margin to shift nav items to the right */
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  color: #fff !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link:active {
+  opacity: 1;
+}
+
+/* Add responsive styles if necessary */
+@media (max-width: 768px) {
+  nav.navbar a.navbar-brand {
+    width: auto; /* Adjust logo size for smaller screens */
+  }
+
+  nav.navbar .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically on small screens */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    padding: 10px 0; /* Adjust padding for nav items */
+  }
+
+  .navbar-text button {
+    padding: 10px 20px; /* Adjust button padding */
+    font-size: 14px; /* Adjust button font size */
+  }
+  .side-image {
+    width: 100%; /* Ensure the image adjusts to the screen size */
+  }
+
+}
+
+.logo-text {
+  color: #fff;
+  position: relative;
+  right: 5px;
+}
+
+.logo-text:hover {
+  color: #fd0404;
+}
+
+span.navbar-text {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex; /* Display social icons horizontally */
+  align-items: center;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 7px; /* Adjust margin for horizontal spacing */
+  display: flex;
+}
+
+.social-icon a {
+  width: 42px;
+  height: 42px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex; /* Use flexbox to center the icon */
+  align-items: center;
+  margin: 5px;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  position: relative; /* Ensure the pseudo-element is positioned correctly */
+}
+
+.social-icon a::before {
+  content: " ";
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: white; /* Background color on hover */
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 0; /* Ensure it is behind the icon */
+}
+
+.social-icon a:hover::before {
+  transform: scale(1);
+  background: linear-gradient(45deg, #f80a0a, #c7094b, #b312db); /* Gradient background on hover */
+
+  
+}
+
+.social-icon a img {
+  width: 100%; /* Adjusted size for better visibility */
+  z-index: 1; /* Ensure it is above the background */
+  transition: filter 0.3s ease-in-out;
+}
+
+.social-icon a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg);
+}
+
+.navbar-text button {
+  font-weight: 700;
+  color: #fff;
+  background-color: #121212;
+  border: 1px solid #fff;
+  padding: 0.5rem  1.8rem;
+  font-size: 15px;
+  margin: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar-text .saibazContact{
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-text button span {
+  z-index: 1;
+}
+
+.navbar-text button::before, .navbar-text .saibazContact::before {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-text button:hover{
+  /* text: #121212; */
+  box-shadow: 4px 4px 15px 5px #644c4c;
+}
+.navbar-text button:hover span {
+  color: #121212; /* Change the text color to black */
+}
+
+.navbar-text button:hover::before {
+  width: 100%;
+}
+
+nav.navbar .navbar-toggle-active,
+nav.navbar .navbar-toggle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+nav.navbar .navbar-toggle-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 2px solid #fff;
+  transition: all 300ms linear;
+  top: -2px;
+}
+
+nav.navbar .navbar-toggle-icon:focus {
+  border-bottom: 2px solid #fff;
+}
+
+nav.navbar .navbar-toggle-icon:after,
+nav.navbar .navbar-toggle-icon::before {
+  width: 24px;
+  position: absolute;
+  height: 2px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  content: " ";
+  z-index: 2;
+  transition: all 300ms linear;
+}
+
+nav.navbar .navbar-toggle-icon:after {
+  top: 8px;
+}
+
+nav.navbar .navbar-toggle[aria-expanded="true"] .navbar-toggle-icon:after {
+  transform: rotate(45deg);
+  background-color: #fff;
+  height: 2px;
+}
+
+nav.navbar .navbar-toggle[aria-expanded="true"] .navbar-toggle-icon::before {
+  transform: translateY(8px) rotate(-45deg);
+  background-color: #fff;
+  height: 2px;
+}
+
+nav.navbar .navbar-toggle[aria-expanded="true"] .navbar-toggle-icon {
+  border-color: transparent;
+}
+@media (max-width: 767px) {
+  .navbar {
+    background-color: black !important;
+  }
+}
+
+
+/* ================================ */
+/* ======   Banner ====== */
+/* ================================ */
+
+
+
+.banner{
+  margin-top: 0;
+  padding: 150px 0 100px 0;
+   /* background-image: url('./assests/image/back.jpg'); */
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner .tagline{
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(170,54,124 , 0.5)) -5.91deg, rgba(74, 47, 189, 0.5)  120deg;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.banner h2{
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: start;
+}
+
+.banner h1{
+  display: flex;
+  justify-content: start;
+}
+/* ... existing code ... */
+
+.cursor {
+  display: inline-block;
+  width: 1px;
+  background-color: #fff;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #fff;
+  }
+}
+
+
+.banner .Saibaz {
+  background: linear-gradient(20deg, red, #c39898);
+    -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text color transparent to show the gradient */
+}
+.banner p{
+  color: #f3dfdf;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+  display: flex;
+  text-align: start;
+  justify-content: center;
+}
+
+
+
+.banner button{
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 30px;
+  letter-spacing: 0.8px;
+  display: block;
+  align-items: center;
+  background-color: #121212;
+  padding: 5px;
+  margin-bottom: 2em;
+}
+
+.banner .resume{
+  text-decoration: none;
+  color:#fff;
+}
+
+.banner button svg{
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1  ;
+}
+
+.banner button:hover svg{
+  margin-left: 25px;
+}
+.side-image {
+  width: 100%; 
+  position: relative;
+  top:-4rem;
+  height: auto; /* Maintain aspect ratio */
+}
+.banner img{
+  animation: upDown 3s linear infinite;
+}
+
+@keyframes upDown {
+  0%{
+    transform: translateY(-30px);
+  }
+  50%{
+    transform: translateY(30px);
+  }
+  100%{
+    transform: translateY(-30px);
+  }
+
+}
+
+.txt-rotate > .wrap{
+  border-right: 00.8em solid #666;
+}
+
+
+/* ============================ */
+.contact {
+  /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
+  padding: 60px 0 200px 0;
+}
+
+.contact h2 {
+	font-size: 45px;
+	font-weight: 700;
+  margin-bottom: 30px;
+}
+.contact form input, .contact form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  color: #fff;
+  margin: 0 0 8px 0;
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+.contact form input:focus, .contact form textarea:focus {
+  background: rgba(255, 255, 255, 1);
+  color: #121212;
+}
+.contact form input::placeholder, .contact form textarea::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
+  color: #121212;
+  opacity: 0.8;
+}
+.contact form button {
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  padding: 14px 48px;
+  font-size: 18px;
+  margin-top: 25px;
+  border-radius: 0;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.contact form button span {
+  z-index: 1;
+  position: relative;
+}
+.contact form button:hover {
+  color: #fff;
+}
+.contact form button::before {
+  content: "";
+  background: #121212;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+.contact form button:hover::before {
+  width: 100%;
+}
+/* .contact img {
+} */
+
+.contact .contactImage {
+  width: 85%;
+  animation: zoomInOut 3s linear infinite;
+  /* height: 50%; */
+}
+
+@media (max-width: 767px) {
+  .contact .contactImage  {
+    margin-bottom: 35px;
+    width: 90%;
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+  /* CONTACT CSS */
+
+
+
+
+/* ============================ */
+
+
+/* ====================================== */
+/* Skills CSS */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto; /* Center the container */
+  overflow: hidden;
+  margin-top: -40px;
+}
+
+.skill-category {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 35px auto;
+  left: 5rem;
+  cursor: pointer;
+  /* overflow: hidden; */
+}
+
+
+
+@keyframes InOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.skill-category:hover{
+  animation: InOut 3s linear infinite;
+}
+
+.skill-inner {
+  position: absolute;
+  width: 135px; /* Adjusted size */
+  height: 135px; /* Adjusted size */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: #292424;
+  z-index: 1; /* Ensure it is above the rotating skills */
+  box-sizing: border-box;
+}
+
+.category-text{
+  /* background: linear-gradient(70deg, red, #c39898);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; */
+  color: #fff;
+  font-size: larger;
+
+}
+
+.skills {
+  position: absolute;
+  width: 100%; /* Full width of the skill-category */
+  height: 100%; /* Full height of the skill-category */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center; /* Rotate around the center */
+  animation: rotate 10s linear infinite;
+}
+
+.skill {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #444;
+  color: white;
+  border-radius: 50%;
+  position: absolute; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+.skill img{
+ 
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-inner {
+    width: 100px; /* Adjusted size */
+    height: 100px; /* Adjusted size */
+  }
+
+  .skills {
+    width: 100%;
+    height: 100%;
+    animation: rotate 10s linear infinite; /* Keep rotation on smaller screens */
+  }
+
+  .skill {
+    position: absolute;
+    transform: none; /* Reset transform */
+  }
+}
+
+/* ====================================== */
+
+
+
+
 .App {
   text-align: center;
 }
