@@ -651,7 +651,7 @@ nav.navbar .navbar-toggle[aria-expanded="true"] .navbar-toggle-icon {
 
   .skill {
     position: absolute;
-    transform: none; /* Reset transform */
+    transform: none; 
   }
 }
 
