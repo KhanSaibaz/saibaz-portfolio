@@ -6,7 +6,7 @@ import sideImg from '../assests/image/side_img.png';
 export default function Banner() {
     const [loopNumber, setLoopNumber] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["Software Engineer", 'Web Developer', "Front-End Developer", "Back-End Developer"];
+    const toRotate = ["Software Engineer", 'Web Developer', "FrontEnd Developer", "BackEnd Developer"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 1500;
@@ -63,7 +63,7 @@ export default function Banner() {
                             <img src={sideImg} alt="header image" className="side-image" />
                         </Col>
                         <Col>
-                        <h2 className="container text-align-center skill-text mt-4 " id='skillsSect' style={{display:'inline',marginTop:'43px'}} >MY Skills</h2>
+                        <h2 className="container text-align-center skill-text mt-4 " id='skillsSect' style={{display:'block',textAlign:'center' }} >MY Skills</h2>
                         </Col>
                     </Row>
                 </Container>

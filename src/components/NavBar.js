@@ -59,7 +59,7 @@ export default function NavBar() {
             </Nav.Link>
 
             <Nav.Link
-              href="#certificate"
+              href="#certificateSection"
               className={activeLink === 'certificate' ? 'active navbar-link' : 'navbar-link'}
               onClick={() => onUpdateActiveLink('certificate')}
             >
