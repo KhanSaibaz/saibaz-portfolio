@@ -20,7 +20,7 @@ export default function Projects() {
 
     { title: 'Portfolio', imageUrl: portfolioProject, info: `My portfolio showcases a responsive design with interactive features and a polished interface. Explore a variety of projects demonstrating proficiency in web development and software engineering. Each project reflects my dedication to creating user-centered solutions and leveraging modern technologies to achieve impactful results`, linkUrl: 'https://github.com/KhanSaibaz/saibaz-portfolio' },
 
-    { title: 'virtual assistant', imageUrl: jarvis, info: `Developed a Jarvis-like assistant using Python to perform tasks such as opening applications, checking the time, and executing various commands. This project demonstrates my skills in Python programming and my ability to Create practical, voice-activated solutions for everyday tasks`, linkUrl: 'https://github.com/KhanSaibaz/Jarvis' },
+    { title: 'virtual assistant', imageUrl: jarvis, info: `Developed a Jarvis-like assistant using Python to perform tasks such as opening applications, checking the time, and executing various commands. This project demonstrates my skills in Python programming and my ability to create practical, voice-activated solutions for everyday tasks`, linkUrl: 'https://github.com/KhanSaibaz/Jarvis' },
 
     { title: 'Import Export', imageUrl: importExportProject, info: `Developed an import-export project using HTML, CSS, JavaScript, Bootstrap, MySQL, PHP, and XAMPP. This project streamlines the management of import-export data, featuring a user-friendly interface and robust backend. It showcases my ability to integrate front-end and back-end technologies to create efficient, functional web applications.`, linkUrl: 'https://github.com/KhanSaibaz/Import-Export' },
   ];
