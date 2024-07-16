@@ -51,7 +51,7 @@ export default function NavBar() {
               Skill
             </Nav.Link>
             <Nav.Link
-              href="#projects"
+              href="#projectSection"
               className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
               onClick={() => onUpdateActiveLink('projects')}
             >
@@ -69,15 +69,15 @@ export default function NavBar() {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#">
-                <img src={linkedIn} alt="icon" />
+              <a href="https://www.linkedin.com/in/khansaibaz231/" target="_blank">
+                <img src={linkedIn} alt="icon"   />
               </a>
-              <a href="#">
+              <a href="https://github.com/KhanSaibaz/" target="_blank">
                 <img src={github} alt="icon" />
               </a>
-              <a href="#">
+              {/* <a href="#">
                 <img src={github} alt="icon" />
-              </a>
+              </a> */}
             </div>
             <button className="vvd" onClick={() => console.log('connect')}>
               <span>

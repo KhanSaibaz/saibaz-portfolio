@@ -62,11 +62,10 @@ export default function Banner() {
                         <Col xs={12} md={6} xl={5}>
                             <img src={sideImg} alt="header image" className="side-image" />
                         </Col>
-                        <Col>
-                        <h2 className="container text-align-center skill-text mt-4 " id='skillsSect' style={{display:'block',textAlign:'center' }} >MY Skills</h2>
-                        </Col>
+                        
                     </Row>
                 </Container>
+                    <hr className=" w-100"  style={{backgroundColor:'white !important',height:'3px',color:'white !important'}}/>
             </section>
         </>
     );

@@ -48,8 +48,7 @@ export default function Skills() {
     }, [category, skills]);
 
     return (
-        <>
-
+      <>
       <div className="skill-category" id="skillsection" data-category={category}>
         <div className="skill-inner rotating mb-4 mt-4">
           <h6 className="category-text">{category} </h6>

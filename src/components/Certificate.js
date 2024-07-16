@@ -60,6 +60,7 @@ export default function Certificate() {
 
   return (
     <>
+        <hr className=" w-100"  style={{backgroundColor:'white !important',height:'3px',color:'white !important'}}/>
       <div className="certificate-header" id='certificateSection'>
         <h1 style={{textAlign:"center", marginTop:"3rem",fontFamily:'comicPillow'}}>Certificate</h1>
       </div>
@@ -76,6 +77,9 @@ export default function Certificate() {
           ))}
         </Slider>
       </div>
+
+      <hr className=" w-100"  style={{backgroundColor:'white !important',height:'3px',color:'white !important'}}/>
+
     </>
   );
 }
