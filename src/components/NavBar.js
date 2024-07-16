@@ -75,16 +75,18 @@ export default function NavBar() {
               <a href="https://github.com/KhanSaibaz/" target="_blank">
                 <img src={github} alt="icon" />
               </a>
-              {/* <a href="#">
-                <img src={github} alt="icon" />
-              </a> */}
+          
             </div>
-            <button className="vvd" onClick={() => console.log('connect')}>
+            <a href="#connect" className='saibazContact'>
+            <button className="vvd" >
               <span>
-                <a href="#connect" className='saibazContact'> Let’s Connect</a>
+                Let’s Connect
               </span>
             </button>
+            </a>
+
           </span>
+
         </Navbar.Collapse>
       </Container>
     </Navbar>
