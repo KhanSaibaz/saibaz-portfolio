@@ -301,7 +301,7 @@ nav.navbar .navbar-toggle[aria-expanded="true"] .navbar-toggle-icon {
 .banner{
   margin-top: 0;
   padding: 150px 0px  0px;
-   /* background-image: url('./assests/image/back.jpg'); */
+   background-image: url('./assests/image/banner_bg11.jpg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -396,24 +396,27 @@ nav.navbar .navbar-toggle[aria-expanded="true"] .navbar-toggle-icon {
   margin-left: 25px;
 }
 .side-image {
-  width: 100%; 
+  width: 115%; 
   position: relative;
-  top:-4rem;
+  top:-6rem;
   height: auto; 
+  border-radius: 50%;
 }
+
+
 .banner img{
   animation: upDown 3s linear infinite;
 }
 
 @keyframes upDown {
   0%{
-    transform: translateY(-30px);
+    transform: translateY(-10px);
   }
   50%{
-    transform: translateY(30px);
+    transform: translateY(10px);
   }
   100%{
-    transform: translateY(-30px);
+    transform: translateY(-10px);
   }
 
 }
@@ -434,13 +437,15 @@ nav.navbar .navbar-toggle[aria-expanded="true"] .navbar-toggle-icon {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 60px 0 20px 0;
-  background-image: radial-gradient(#ffffff 2.2px, transparent 2.2px), radial-gradient(#ffffff 1.5px, transparent 1.5px);
+  /* background-image: radial-gradient(#ffffff 2.2px, transparent 2.2px), radial-gradient(#ffffff 1.5px, transparent 1.5px);
 background-size: 70px 70px;
 background-position: 0 0, 35px 35px;
-background-color: #3c3d3d;
+background-color: #3c3d3d; */
   margin: 0 auto; 
   overflow: hidden;
-  margin-top: -40px;
+  margin-top: -64px;
+  background-image: url('./assests/image/banner_bg11.jpg');
+  
 }
 
 .skill-category {
@@ -564,7 +569,11 @@ background-color: #3c3d3d;
 
 /* ==================== PROJECTS ================================== */
 
+.project-header{
+  background-image: url('./assests/image/banner_bg14.jpg');
+  margin-top: -16px;
 
+}
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -575,6 +584,7 @@ background-color: #3c3d3d;
   gap: 20px; 
   width: 90%; 
   margin: 0 auto; 
+
 }
 
 .project {
@@ -676,13 +686,18 @@ background-color: #3c3d3d;
 /* ========================================== */
 
 /* =================== CERTIFICATE CSS ========================= */
+.certificate-header{
+  background-image: url('./assests/image/banner_bg11.jpg');
+  margin-top: -1.4rem;
 
+}
 
 .certificate-container {
   width: 90%; 
   margin: 0 auto; 
   padding: 15px 25px;
   overflow: hidden;
+
 }
 
 .certificate {
@@ -766,7 +781,7 @@ background-color: #3c3d3d;
 
 @media (max-width: 576px) {
   .certificate {
-    height: auto; /* Adjust height for small screens */
+    height: auto; 
   }
 }
 
@@ -775,10 +790,11 @@ background-color: #3c3d3d;
 /* ===================== CONTACT US ==================================== */
 .contact {
   padding: 50px 0 50px 0;
-  background-image: radial-gradient(#ffffff 2.2px, transparent 2.2px), radial-gradient(#ffffff 1.5px, transparent 1.5px);
-background-size: 70px 70px;
-background-position: 0 0, 35px 35px;
-background-color: #3c3d3d;
+  margin-bottom: -18px;
+margin-top: -18px;
+background-image: url('./assests/image/banner_bg11.jpg');
+
+
 }
 
 .contact h2 {
@@ -878,16 +894,14 @@ background-color: #3c3d3d;
 /* ================ FOOTER CSS ============== */
 
 .footer {
+background-image: url('./assests/image/banner_bg14.jpg');
+  margin-top: -16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   color: #fff;
-  background-image: radial-gradient(#ffffff 2.2px, transparent 2.2px), radial-gradient(#ffffff 1.5px, transparent 1.5px);
-  background-size: 70px 70px;
-  background-position: 0 0, 35px 35px;
-  background-color:#080808;
-    /* background: linear-gradient(194deg, rgb(189 48 48 / 50%) -5.91%, rgb(72 71 78 / 50%) 111.58%); */
+
 }
 
 .footer-left {

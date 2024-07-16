@@ -60,10 +60,9 @@ export default function Certificate() {
 
   return (
     <>
-        <hr className=" w-100"  style={{backgroundColor:'white !important',height:'3px',color:'white !important'}}/>
       <div className="certificate-header" id='certificateSection'>
+        <hr className=" w-100"  style={{backgroundColor:'white !important',height:'3px',color:'white !important'}}/>
         <h1 style={{textAlign:"center", marginTop:"3rem",fontFamily:'comicPillow'}}>Certificate</h1>
-      </div>
       <div id="certificate" className="certificate-container">
         <Slider {...settings}>
           {certificates.map((certificate, index) => (
@@ -80,6 +79,7 @@ export default function Certificate() {
 
       <hr className=" w-100"  style={{backgroundColor:'white !important',height:'3px',color:'white !important'}}/>
 
+                </div>
     </>
   );
 }

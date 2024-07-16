@@ -28,11 +28,10 @@ export default function Projects() {
 
   return (
     <>
-                    <hr className=" w-100"  style={{backgroundColor:'white !important',height:'3px',color:'white !important'}}/>
 
       <div className="project-header" id='projectSection'>
+      <hr className=" w-100"  style={{backgroundColor:'white !important',height:'3px',color:'white !important'}}/>
         <h1 style={{textAlign:"center", marginTop:"3rem", fontFamily:'comicPillow'}} className='main_header_text'>PROJECTS</h1>
-      </div>
       <div id="Project" className="projects-container">
         {projects.map((project, index) => (
           <div key={index} className="project">
@@ -48,6 +47,7 @@ export default function Projects() {
         ))}
       </div>
       
+        </div>
     </>
   );
 }
