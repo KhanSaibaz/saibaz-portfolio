@@ -54,8 +54,8 @@ export default function Banner() {
                             </h1>
                             <h2><span className="wrap">{text}</span><span className="cursor">|</span></h2>
                             <p>As a software engineer, I specialize in creating innovative solutions that enhance user experiences. With a strong background in software development and a passion for technology, I aim to build applications that solve real-world problems and make a positive impact. Let's build something amazing together!</p>
-                            <button onClick={() => console.log('connect')}>
-                               <a href={'https://drive.google.com/file/d/1Qn6QsGw1fOKaBB63wocCBsFLJadqFqFR/view?usp=drive_link'} className="resume" target="_blank">
+                            <button style={{cursor:'pointor'}}>
+                               <a href={'https://drive.google.com/file/d/1Uw1g1tI2LL7jmALveSwTx75zX99S4qYi/view?usp=drive_link'} className="resume" target="_blank">
                                View Resume <ArrowDownCircle/> 
                                 </a> </button>
                         </Col>
